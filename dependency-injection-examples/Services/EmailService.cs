@@ -23,7 +23,7 @@ namespace dependency_injection_examples.Services
 
         public void SendMail(string addressee, string message)
         {
-            Console.WriteLine($"Sent ${message} to ${addressee}");
+            Console.WriteLine($"Sent {message} to {addressee}");
         }
 
         public void SendMailToAllAddressees(string message)
