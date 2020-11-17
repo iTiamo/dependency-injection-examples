@@ -34,7 +34,7 @@ namespace dependency_injection_examples
             });
 
             // Below we register services into the Service Container. We start with the most basic example and gradually increase in difficulty.
-            // Anywhere the AddSingleton method is used, the AddTransient or AddScopes methods can also be used. The only difference is in lifetime, from most available to least:
+            // Anywhere the AddSingleton method is used, the AddTransient or AddScoped methods can also be used. The only difference is in lifetime, from most available to least:
 
             // Singleton : Only ONE instance can exist for the lifetime of the Application
             // Scoped : One instance is created PER request (a request starts when an endpoint is called and dies when a result is returned)
