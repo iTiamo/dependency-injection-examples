@@ -46,7 +46,7 @@ namespace dependency_injection_examples
 
             // 2. Registering a Singleton implementing an interface into the Service Container
             // Imagine we are running on a Windows system and we implement some logic to store a file
-            // If we migrate to a Linux environment we could write another StorageService class implementing the IStorageService interface for storing files on Linuy
+            // If we migrate to a Linux environment we could write another StorageService class implementing the IStorageService interface for storing files on Linux
             services.AddSingleton<IStorageService, WindowsStorageService>();
 
             // 3. Registering a Service that needs another service into the Service Container
