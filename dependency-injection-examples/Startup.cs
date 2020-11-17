@@ -42,18 +42,20 @@ namespace dependency_injection_examples
 
             // 1. Registering a Singleton (with only a single method) into the Service Container
             // This example simply demonstrates how to register Services into the Service Conttainer at the most basic level
+
             services.AddSingleton<ConsoleService>();
 
             // 2. Registering a Singleton implementing an interface into the Service Container
             // Imagine we are running on a Windows system and we implement some logic to store a file
             // If we migrate to a Linux environment we could write another StorageService class implementing the IStorageService interface for storing files on Linux
+
             services.AddSingleton<IStorageService, WindowsStorageService>();
 
             // 3. Registering a Service that needs another service into the Service Container
             // Imagine we have an EmailService that we use to send emails to customers
             // We have another service called AddressBookService that manages all the email addresses of our customers
             // The EmailService depends on the AddressBookService to send emails, we need to register both services into the Service Container
-            // AddressBookService
+
             services.AddSingleton<IAddressBookService, AddressBookService>();
             services.AddSingleton<IEmailService, EmailService>();
         }
